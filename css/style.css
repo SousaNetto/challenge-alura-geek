@@ -12,6 +12,8 @@
   --color-secondary: #5D04D9;
   --color-input: #03318C;
   --color-text: #FFFFFF;
+  --altura-footer: 140px;
+  --altura-header: 62px;
 }
 body {
   font-family: "IBM Plex Mono", monospace;
@@ -20,12 +22,13 @@ header {
   text-align: center;
   background-color: var(--color-primary);
   padding: 10px 0;
+  height: var(--altura-header);
 }
 header img {
   width: 270px;
 }
 main {
-
+  min-height: calc(90vh - (var(--altura-header) + var(--altura-header)));
 }
 .title {
   font-family: var(--ff-title);
@@ -131,6 +134,7 @@ footer {
   background-color: var(--color-primary);
   margin-top: 4rem;
   padding: 2rem;
+  height: var(--altura-footer);
 }
 footer img {
   width: 270px;
