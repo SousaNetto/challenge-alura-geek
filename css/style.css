@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+
+  --ff-title: "Press Start 2P", cursive;
+  --ff-body: "IBM Plex Mono", monospace;
+  --color-primary: #F57500;
+  --color-secondary: #5D04D9;
+  --color-input: #03318C;
+  --color-text: #FFFFFF;
+}
+body {
+  font-family: "IBM Plex Mono", monospace;
+}
+header {
+  text-align: center;
+  background-color: var(--color-primary);
+  padding: 10px 0;
+}
+header img {
+  width: 270px;
+}
+main {
+
+}
+.title {
+  font-family: var(--ff-title);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* adicionar produto */
+.add-product {
+  margin: 2.5rem auto;
+  max-width: 400px;
+}
+.add-product .title {
+  max-width: 150px;
+  margin: 0 auto 1rem auto;
+}
+.inputs-product {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2.5rem;
+}
+.input-all {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 30px;
+  border: 3px solid var(--color-input);
+}
+.buttons {
+  display: flex;
+  gap: 13px;
+  padding: 0 2.5rem;
+}
+.btn-reset, .btn-save{
+  border-radius: 30px;
+  border: 3px solid var(--color-input);
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.btn-save {
+  background-color: var(--color-input);
+  color: var(--color-text);
+}
+.btn-reset {
+  background-color: var(--color-text);
+  color: var(--color-input);
+}
+
+/* my-products */
+
+.my-products {
+  margin-top: 4rem;
+}
+.my-products .title{
+  margin-bottom: 4rem;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+  gap: 5rem 0.625rem;
+}
+.product-card {
+  background-color: var(--color-secondary);
+  position: relative;
+  padding: 0.625rem;
+  border: 3px solid #000000;
+  border-radius: 0.625rem;
+  max-width: 196px;
+  max-height: 258px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-image {
+  width: 100%;
+  max-width: 250px;
+  border: 3px solid #000000;
+}
+.product-name {
+  margin-top: 1rem;
+  font-size: 0.938rem;
+  color: var(--color-text);
+  font-weight: 400;
+  margin-bottom: 0.625rem;
+}
+.product-price {
+  font-size: 1rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+.icon-trash {
+  position: absolute;
+  bottom: 0.625rem;
+  right: 0.625rem;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  background-color: var(--color-primary);
+  margin-top: 4rem;
+  padding: 2rem;
+}
+footer img {
+  width: 270px;
+}
+footer p {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-text);
+}
+footer p a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-style: wavy;
+}
+footer span {
+  font-weight: 300;
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+/* responsividade */
+@media (min-width: 600px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 3rem;
+  }
+  .my-products {
+    margin: 0;
+  }
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .add-product {
+    margin: 0;
+    width: 470px;
+    max-width: 100%;
+  }
+}
