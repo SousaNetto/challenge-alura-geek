@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALURA GEEK</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="./assets/images/Logo.png" alt="logo da alura geek">
+  </header>
+  <main>
+    <section class="add-product">
+      <h2 class="title">adicionar produto:</h2>
+      <form class="form-product">
+        <div class="inputs-product">
+          <input class="input-all" type="text" name="product-name" id="product-name" placeholder="nome do produto">
+          <input class="input-all" type="number" name="product-price" id="product-price" placeholder="preço do produto">
+          <input class="input-all" type="text" name="product-image" id="product-image" placeholder="url da imagem">
+        </div>
+        <div>
+          <div class="buttons">
+            <button class="btn-save" type="submit">Guardar</button>
+            <button class="btn-reset" type="reset">Limpar</button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section class="my-products">
+
+      <h2 class="title">meus produtos:</h2>
+
+      <div class="products">
+        
+        <div class="product-card">
+          <img class="product-image" src="./assets/images/image-product-1.png" alt="storm">
+          <h4 class="product-name">StormTrooper</h4>
+          <p class="product-price">$ 29,99</p>
+          <img class="icon-trash" src="./assets/images/icon-trash.png" alt="icone de deletar o item">
+        </div>
+        <div class="product-card">
+          <img class="product-image" src="./assets/images/image-product-2.png" alt="Game Boy Classic">
+          <h4 class="product-name">Game Boy Classic</h4>
+          <p class="product-price">$ 60,99</p>
+          <img class="icon-trash" src="./assets/images/icon-trash.png" alt="icone de deletar o item">
+        </div>
+        <div class="product-card">
+          <img class="product-image" src="./assets/images/super-nintendo.png" alt="Console Super Nintendo Raspberry SNES">
+          <h4 class="product-name">Console Super Nintendo Raspberry SNES</h4>
+          <p class="product-price">$ 199,99</p>
+          <img class="icon-trash" src="./assets/images/icon-trash.png" alt="icone de deletar o item">
+        </div>
+        <div class="product-card">
+          <img class="product-image" src="./assets/images/monitor.png" alt="monitor antigo">
+          <h4 class="product-name">Monitor gamer 240hz 1ms</h4>
+          <p class="product-price">$ 869,99</p>
+          <img class="icon-trash" src="./assets/images/icon-trash.png" alt="icone de deletar o item">
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <footer>
+    <img src="./assets/images/Logo.png" alt="logo da alura geek">
+    <p>Desenvolvido por <a href="https://www.linkedin.com/in/josenettojn/" target="_blank">José Neto</a></p>
+    <span>alura latam - 2024</span>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
