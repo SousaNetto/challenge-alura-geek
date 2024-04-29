@@ -6,9 +6,6 @@ const btnSave = document.querySelector(".btn-save");
 const btnReset = document.querySelector(".btn-reset");
 const productsList = document.querySelector(".products");
 
-// const btnDelete = document.querySelectorAll("#icon-trash");
-//   console.log(btnDelete.length);
-
 form.addEventListener("submit", (event) => {
   event.preventDefault()
 })
@@ -88,10 +85,10 @@ async function addProductInitial() {
     
     const iconTrash = document.createElement('img');
     iconTrash.classList.add('icon-trash');
-    iconTrash.id = 'icon-trash'; // Corrige o ID duplicado
+    iconTrash.id = 'icon-trash';
     iconTrash.src = './assets/images/icon-trash.png';
     iconTrash.alt = 'Delete Product';
-    iconTrash.addEventListener('click', () => deleteProduct(product.id)); // Adiciona o event listener para deletar o produto
+    iconTrash.addEventListener('click', () => deleteProduct(product.id));
     
     productInfo.appendChild(productName);
     productInfo.appendChild(productPrice);
@@ -102,10 +99,6 @@ async function addProductInitial() {
     
     productsList.appendChild(productCard);
   });
-  
-  // Seleciona os ícones de lixeira após adicionar os produtos ao DOM
-  const btnDelete = document.querySelectorAll("#icon-trash");
-  console.log(btnDelete.length);
 }
 
 addProductInitial();
@@ -123,6 +116,7 @@ async function deleteProduct(id) {
 
     // Atualiza a lista de produtos após a exclusão
     await addProductInitial();
+
   } catch (error) {
     console.error('Erro ao enviar a requisição:', error);
   }
