@@ -109,6 +109,7 @@ main {
   width: 100%;
   max-width: 250px;
   border: 3px solid #000000;
+  background-color: var(--color-text);
 }
 .product-name {
   margin-top: 1rem;
@@ -126,6 +127,7 @@ main {
   position: absolute;
   bottom: 0.625rem;
   right: 0.625rem;
+  cursor: pointer;
 }
 
 /* footer */
